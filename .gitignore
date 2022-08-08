@@ -2,7 +2,8 @@
 /public/img
 /public/upload
 /public/storage
-/public/storage
+/public/img
+/public/upload
 /storage/*.key
 /vendor
 .env

@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <StudentLessonDetail :lesson="lesson"/>
-        <div class="card-footer">
+        <!--<div class="card-footer">
             <div class="text-right" v-if="(lesson.exam != null && typeof lesson.exam != 'undefined')">
                 <a v-if="user_exam.status >= 3" :href="'/learn/student_area/exam/'+lesson.exam.id"><button type="button" class="btn btn-sm btn-success">Redo Exam</button></a> 
                 <a v-else-if="(parseInt(lesson.exam.trials != null ? lesson.exam.trials : 10000000) - parseInt(trial_count) > 0) && user_exam.status < 3" :href="'/learn/student_area/exam/'+lesson.exam.id"><button type="button" class="btn btn-sm btn-success">Go To Exam</button></a> 
@@ -9,7 +9,7 @@
                 <button v-else type="button" class="btn btn-sm btn-default" @click="skipLesson(lesson.id)">Skip >></button>
             </div>
             <div class="text-right" v-else><button type="button" class="btn btn-sm btn-success" @click="completeLesson(lesson.id)">Complete</button></div>
-        </div>
+        </div>-->
     </div>
 </template>
 <script>

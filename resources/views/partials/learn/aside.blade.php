@@ -21,6 +21,46 @@
                 <li class="nav-item">
                     <a href="/profile" class="nav-link"><i class="nav-icon fas fa-user"></i><p>Profile</p></a>
                 </li>
+                @if(Auth::user()->hasRole('E-Services') || Auth::user()->hasRole('Super Admin'))
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-briefcase-medical"></i>
+                        <p>Electronic Services <i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/eservices/front_office" class="nav-link">
+                            <i class="fas fa-laptop-medical nav-icon"></i>
+                            <p>Front Office</p>
+                            </a>
+                        </li>
+                        @if(Auth::user()->hasRole('Tutor') || Auth::user()->hasRole('Super Admin') || Auth::user()->can('learn_tutor'))
+                        <li class="nav-item">
+                            <a href="/eservices/tutor_area" class="nav-link">
+                            <i class="fas fa-user-md nav-icon"></i>
+                            <p>Medical Officer</p>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::user()->hasRole('Learning Admin') || Auth::user()->hasRole('Super Admin') || Auth::user()->can('learn_admin'))
+                        <li class="nav-item">
+                            <a href="/eservices/admin_area" class="nav-link">
+                            <i class="fa fa-x-ray nav-icon"></i>
+                            <p>Radiologist</p>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::user()->hasRole('Learning Admin') || Auth::user()->hasRole('Super Admin') || Auth::user()->can('learn_admin'))
+                        <li class="nav-item">
+                            <a href="/eservices/admin_area" class="nav-link">
+                            <i class="fa fa-user-cog nav-icon"></i>
+                            <p>Administrator</p>
+                            </a>
+                        </li>
+                        @endif
+                    </ul>
+                </li>
+                @endif
                 @if(Auth::user()->hasRole('Super Admin') || Auth::user()->can('user_management') || Auth::user()->hasRole('Human Resource'))
                 <li class="nav-item">
                     <a href="/users" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Users</p></a>

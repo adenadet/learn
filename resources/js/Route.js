@@ -63,6 +63,10 @@ Vue.component('DepartmentAll',          DepartmentAll);
 Vue.component('DepartmentForm',         DepartmentForm);
 Vue.component('DepartmentSingle',       DepartmentSingle);
 
+import EServiceFrontAppointment      from './eservices/front/Appointment.vue';
+import EServiceFrontAppointments     from './eservices/front/Appointments.vue';
+Vue.component('EServiceFrontAppointment',        EServiceFrontAppointment);
+Vue.component('EServiceFrontAppointments',       EServiceFrontAppointments);
 
 import Users from './components/Users.vue';
 
@@ -359,6 +363,11 @@ let routes = [
     //Department Links
         {path: '/departments',       component:DepartmentAll},
         {path: '/departments/:id',   component:DepartmentSingle},
+
+    //EServices Links
+        {path: '/eservices/front_office',                   component:EServiceFrontAppointments},
+        {path: '/eservices/front_office/appointments',      component:EServiceFrontAppointments},
+        {path: '/eservices/front_office/appointments',      component:EServiceFrontAppointment},
 
     //Network Checkers Module
         {path: '/internet', component: NetworkDashboard},
