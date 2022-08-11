@@ -8,7 +8,7 @@
                 <router-link to="/eservices/front_office/appointments" class="nav-link"><i class="fa fa-calendar-day mr-1"></i> All Appointments</router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/eservices/front_office/payments" class="nav-link"><i class="fas fa-credit-card mr-1"></i> Make Payment</router-link>
+                <router-link to="/eservices/front_office/payments" class="nav-link"><i class="fas fa-credit-card mr-1"></i> Payments</router-link>
             </li>
         </ul>
     </div>

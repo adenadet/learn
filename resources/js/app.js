@@ -106,6 +106,10 @@ Vue.filter('addOne', function(value) {
     let val = value + 1;
     return val;
     });
+
+Vue.filter('age', function(value){
+    return moment().diff(moment(value, "DD MMM YYYY"), 'years');
+});
     
 Vue.filter('currency', function(value) {
     if (isNaN(value)){ return '0.00';}
@@ -115,6 +119,10 @@ Vue.filter('currency', function(value) {
 
 Vue.filter('ExcelDate', function(text){
     return moment(text).format('MMMM Do, YYYY');
+    });
+
+Vue.filter('ExcelDateShort', function(text){
+    return moment(text).format('DD/MM/YYYY');
     });
 
 Vue.filter('ExcelDateMonth', function(text){
